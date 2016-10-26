@@ -13,7 +13,7 @@ ENV APPDIRNAME="mylar"
 ENV GITURL="https://github.com/evilhero/mylar.git"
 ENV GITBRANCH="development"
 ENV APP_EXEC="Mylar.py"
-ENV APP_OPTS="--config-file ${CONFIG}"
+ENV APP_OPTS="--nolaunch --datadir ${CONFIG}/mylar"
 ENV APP_COMP="python"
 ENV HOME="${CONFIG}"
 
