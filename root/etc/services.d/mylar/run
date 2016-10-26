@@ -1,5 +1,7 @@
 #!/usr/bin/with-contenv bash
 
+#variables set in Dockerfile
+cd "${APP_ROOT}/${APPDIRNAME}"
 exec \
-	s6-setuidgid abc python /app/mylar/Mylar.py --nolaunch \
-	--datadir /config/mylar
+	s6-setuidgid abc "$APP_COMP" "${APP_EXEC}" \
+           "$APP_OPTS"
