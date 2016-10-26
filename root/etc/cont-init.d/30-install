@@ -34,7 +34,7 @@ fi
 
 if [ -z "${APP_OPTS}" ]
 then
-    APP_OPTS="--config-file /config"
+    APP_OPTS="--nolaunch --datadir ${CONFIG}/mylar"
 fi
 
 if [ -z "${APP_COMP}" ]
