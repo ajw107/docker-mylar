@@ -1,4 +1,4 @@
-FROM lsiobase/alpine.python
+FROM lsiobase/alpine.python:3.5
 MAINTAINER sparklyballs, ajw107 (Alex Wood)
 
 # set version label
@@ -13,7 +13,7 @@ ENV APPDIRNAME="mylar"
 ENV GITURL="https://github.com/evilhero/mylar.git"
 ENV GITBRANCH="development"
 ENV APP_EXEC="Mylar.py"
-ENV APP_OPTS="--nolaunch --datadir ${CONFIG}/mylar"
+ENV APP_OPTS="--quiet --nolaunch --datadir ${CONFIG}/mylar"
 ENV APP_COMP="python"
 ENV HOME="${CONFIG}"
 
@@ -26,7 +26,8 @@ RUN apk update && apk add --no-cache nano git
 RUN \
  pip install --no-cache-dir -U \
 	comictagger \
-	configparser && \
+	configparser \
+	tzlocal && \
 
 # cleanup
  rm -rf \

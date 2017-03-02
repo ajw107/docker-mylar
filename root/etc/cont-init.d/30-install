@@ -1,49 +1,5 @@
 #!/usr/bin/with-contenv bash
 
-#Dont really need these here now, but you never know
-if [ -z "${CONFIG}" ]
-then
-    CONFIG="/config"
-fi
-
-if [ -z "${APP_ROOT}" ]
-then
-    APP_ROOT="/app"
-fi
-
-if [ -z "${APPDIRNAME}" ]
-then
-    APPDIRNAME="mylar"
-fi
-
-if [ -z "${GITURL}" ]
-then
-    GITURL="ME="mylar"
-ENV GITURL="https://github.com/evilhero/mylar.git"
-fi
-
-if [ -z "${GITBRANCH}" ]
-then
-    GITBRANCH="development"
-fi
-
-if [ -z "${APP_EXEC}" ]
-then
-    APP_EXEC="Mylar.py"
-fi
-
-if [ -z "${APP_OPTS}" ]
-then
-    APP_OPTS="--nolaunch --datadir ${CONFIG}/mylar"
-fi
-
-if [ -z "${APP_COMP}" ]
-then
-    APP_COMP="python"
-fi
-
-####ALL user vars set up and checked now, I think.....
-
 # create folders
 # make folders
 mkdir -p "${CONFIG}/mylar"
